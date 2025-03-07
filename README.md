@@ -19,5 +19,9 @@ Welcome to the official landing page of SolidCat, a startup focused on deliverin
 
 Feel free to reach out or connect with us through our social media profiles!
 
-[![LinkedIn](https://upload.wikimedia.org/wikipedia/commons/0/01/LinkedIn_Logo_2023.png)](https://www.linkedin.com/company/solid-cat)  
-[![Instagram](https://upload.wikimedia.org/wikipedia/commons/e/e7/Instagram_logo_2022.svg)](https://www.instagram.com/solidcat_/)
+<a href="https://www.linkedin.com/company/solid-cat">
+  <img src="https://img.shields.io/badge/linkedin-%230077B5.svg?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn">
+</a>
+<a href="https://www.instagram.com/solidcat_/">
+  <img src="https://img.shields.io/badge/Instagram-%23E4405F.svg?style=for-the-badge&logo=Instagram&logoColor=white" alt="Instagram">
+</a>

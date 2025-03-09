@@ -1,5 +1,10 @@
 ---
 const { t, lang } = Astro.props;
+
+interface NavbarItem {
+    title: string;
+    url: string;
+}
 ---
 
 <nav class="h-20 border-b border-white flex items-center justify-between px-10">
@@ -9,13 +14,13 @@ const { t, lang } = Astro.props;
 
     <div class="flex items-center space-x-8">
         {
-            t.items.map((item) => (
-                <a href=`${lang}${item.url}` class="text-white text-lg hover:opacity-80 transition">
+            t.items.map((item:NavbarItem) => (
+                <a href={`${lang}${item.url}`} class="text-white text-lg hover:opacity-80 transition">
                     {item.title}
                 </a>
             ))
         }
-        <a href=`${lang}${t.getStartedButton.url}` class="text-black bg-[#fbf0ff] text-lg border rounded-xl px-4 py-2 hover:text-[#fbf0ff] hover:bg-[#2d1434] transition">
+        <a href={`${lang}${t.getStartedButton.url}`} class="text-black bg-[#fbf0ff] text-lg border rounded-xl px-4 py-2 hover:text-[#fbf0ff] hover:bg-[#2d1434] transition">
             {t.getStartedButton.title}
         </a>
     </div>

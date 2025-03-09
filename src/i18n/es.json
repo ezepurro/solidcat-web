@@ -1,3 +1,26 @@
 {
-    "welcome": "Bienvenido a esta prueba"
+    "navbar": {
+        "items": [
+            {
+                "title": "Productos",
+                "url": "/products"
+            },
+            {
+                "title": "Precios",
+                "url": "/pricing"
+            },
+            {
+                "title": "Preguntas frecuentes",
+                "url": "/faq"
+            }
+        ],
+        "getStartedButton": {
+            "title": "Empezar",
+            "url": "/get-started"
+        }
+    },
+    "welcome": {
+        "title": "Soluciones digitales para empresas en crecimiento",
+        "getStartedButton": "Empezar"
+    }
 }

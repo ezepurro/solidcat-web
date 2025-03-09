@@ -1,4 +1,5 @@
 ---
+import Navbar from '../components/Navbar.astro';
 import translations from '../i18n';
 import Layout from '../layouts/Layout.astro';
 
@@ -16,5 +17,7 @@ const t = translations[locale];
 
 
 <Layout lang={lang}>
-	<h1>{t.welcome}</h1>
+    <div class="h-screen bg-linear-to-b from-[#2d1434] to-black text-white">
+        <Navbar t={t.navbar} lang={lang} />
+    </div>
 </Layout>

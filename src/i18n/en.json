@@ -1,3 +1,27 @@
 {
-    "welcome": "Welcome to this test!"
+    "navbar": {
+        "items": [
+            {
+                "title": "Products",
+                "url": "/products"
+            },
+            {
+                "title": "Pricing",
+                "url": "/pricing"
+            },
+            {
+                "title": "FAQ",
+                "url": "/faq"
+            }
+        ],
+        "getStartedButton": {
+            "title": "Get Started",
+            "url": "/get-started"
+        }
+    },
+    "welcome": {
+        "title": "Digital solutions for growing business",
+        "getStartedButton": "Get Started"
+    }
+    
 }

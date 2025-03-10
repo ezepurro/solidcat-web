@@ -21,20 +21,26 @@ interface NavbarItem {
     </button>
 
     <!-- Desktop -->
-    <div class="hidden md:flex items-center space-x-8 ml-auto">
-        {t.items.map((item: NavbarItem) => (
-            <a href={`${lang}${item.url}`} class="text-white text-lg hover:opacity-80 transition">
-                {item.title}
-            </a>
-        ))}
-        <a href={`${lang}${t.getStartedButton.url}`} class="text-black bg-[#fbf0ff] text-lg border rounded-xl px-4 py-2 hover:text-[#fbf0ff] hover:bg-[#2d1434] transition duration-300 ease-in-out font-bold">
-            {t.getStartedButton.title}
-        </a>
+    <div class="hidden md:flex ml-auto">
+        <ul class="list-none flex space-x-8">
+            {t.items.map((item: NavbarItem) => (
+                <li>
+                    <a href={`${lang}${item.url}`} class="text-white text-lg hover:opacity-80 transition">
+                        {item.title}
+                    </a>
+                </li>
+            ))}
+            <li>
+                <a href={`${lang}${t.getStartedButton.url}`} class="text-black bg-[#fbf0ff] text-lg border rounded-xl px-4 py-2 hover:text-[#fbf0ff] hover:bg-[#2d1434] transition duration-300 ease-in-out font-bold">
+                    {t.getStartedButton.title}
+                </a>
+            </li>
+        </ul>
     </div>
 </nav>
 
-<!-- Mobile -->
-<div id="mobileMenu" class="hidden md:hidden absolute top-20 left-0 w-full bg-[#2d1434] text-white flex flex-col items-center space-y-4 py-4">
+<!-- Mobile Menu -->
+<div id="mobileMenu" class="overflow-hidden max-h-0 opacity-0 md:hidden absolute top-20 left-0 w-full bg-[#2d1434] text-white flex flex-col items-center space-y-4 py-4 transition-all duration-300 ease-in-out">
     {t.items.map((item: NavbarItem) => (
         <a href={`${lang}${item.url}`} class="text-lg hover:opacity-80 transition">
             {item.title}
@@ -45,7 +51,6 @@ interface NavbarItem {
     </a>
 </div>
 
-
 <script>
     document.addEventListener("DOMContentLoaded", function () {
         const menuButton = document.getElementById("menuButton");
@@ -53,7 +58,13 @@ interface NavbarItem {
 
         if (menuButton && mobileMenu) {
             menuButton.addEventListener("click", function () {
-                mobileMenu.classList.toggle("hidden");
+                if (mobileMenu.classList.contains("max-h-0")) {
+                    mobileMenu.classList.remove("max-h-0", "opacity-0");
+                    mobileMenu.classList.add("max-h-screen", "opacity-100");
+                } else {
+                    mobileMenu.classList.remove("max-h-screen", "opacity-100");
+                    mobileMenu.classList.add("max-h-0", "opacity-0");
+                }
             });
         }
     });

@@ -1,0 +1,32 @@
+---
+const { t, lang } = Astro.props;
+
+interface howDoWeWorkItem {
+    title: string,
+    description: string,
+    redirectText: string,
+    redirectUrl: string
+}
+---
+
+<section class="h-auto flex items-center justify-center px-4 md:px-10 pt-20 pb-40 md:border max-w-screen-xl mx-auto">
+    <div class="w-full">
+        <div class="max-w-[230px] md:max-w-[400px] lg:max-w-[800px] mx-auto text-center">
+            <h2 class="text-xl md:text-4xl md:font-semibold">{t.title}</h2>
+            <h3 class="text-2xl md:text-5xl font-black mt-6">
+                <span class="text-[#2d1434] bg-[#fbf0ff] px-2">{t.sloganFirst}</span> {t.sloganSecond}
+            </h3>
+        </div>
+        <div class="mt-10 flex flex-wrap gap-10 justify-center">
+            {
+                t.howDoWeWorkItems.map((item: howDoWeWorkItem, index: number) => (
+                    <article class="border p-6 w-full sm:w-[80%] md:w-[45%] lg:w-[30%] text-center md:text-left shadow-lg shadow-[#ffffff5b] relative before:content-[''] before:absolute before:-bottom-2 before:-left-2 before:w-full before:h-full before:bg-[#ffffff1a] before:-z-10">
+                        <h4 class="font-semibold text-xl md:text-2xl mb-1">{item.title}</h4>
+                        <p class="font-light text-sm md:text-base mb-4">{item.description}</p>
+                        <a class="font-normal text-sm text-cyan-500 hover:text-cyan-700 hover:underline underline-offset-4 transition duration-300 " href={`${lang}${item.redirectUrl}`}>{item.redirectText}</a>
+                    </article>
+                ))
+            }
+        </div>
+    </div>
+</section>

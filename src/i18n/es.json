@@ -19,8 +19,27 @@
             "url": "/get-started"
         }
     },
-    "welcome": {
+    "hero": {
         "title": "Soluciones digitales para empresas en crecimiento",
         "getStartedButton": "Empezar"
+    },
+    "howDoWeWork": {
+        "title": "Como trabajamos",
+        "sloganFirst": "código sólido,",
+        "sloganSecond": "ideas ágiles",
+        "howDoWeWorkItems": [
+            {
+                "title": "Soluciones prediseñadas",
+                "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin molestie diam ligula, vitae ornare erat tempor in. Vestibulum auctor bibendum aliquet.",
+                "redirectText": "Conocer más",
+                "redirectUrl": "/products"
+            },
+            {
+                "title": "Soluciones a medida",
+                "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin molestie diam ligula, vitae ornare erat tempor in. Vestibulum auctor bibendum aliquet.",
+                "redirectText": "Conocer más",
+                "redirectUrl": "/custom-solutions"
+            }
+        ]
     }
 }

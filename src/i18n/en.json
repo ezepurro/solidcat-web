@@ -19,9 +19,28 @@
             "url": "/get-started"
         }
     },
-    "welcome": {
+    "hero": {
         "title": "Digital solutions for growing business",
         "getStartedButton": "Get Started"
+    },
+    "howDoWeWork": {
+        "title": "How do we work",
+        "sloganFirst": "solid code,",
+        "sloganSecond": "agile ideas",
+        "howDoWeWorkItems": [
+            {
+                "title": "Prebuilt Solutions",
+                "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin molestie diam ligula, vitae ornare erat tempor in. Vestibulum auctor bibendum aliquet.",
+                "redirectText": "Learn more",
+                "redirectUrl": "/products"
+            },
+            {
+                "title": "Custom Solutions",
+                "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin molestie diam ligula, vitae ornare erat tempor in. Vestibulum auctor bibendum aliquet.",
+                "redirectText": "Learn more",
+                "redirectUrl": "/custom-solutions"
+            }
+        ]
     }
     
 }

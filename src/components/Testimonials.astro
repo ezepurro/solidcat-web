@@ -1,0 +1,47 @@
+---
+const { t } = Astro.props;
+
+interface testimonialItem {
+    author: string,
+    business: string,
+    country: string,
+    rating: number,
+    text: string,
+    imageUrl: string
+}
+
+const getStars = (rating: number) => {
+    const fullStars = Math.floor(rating);
+    const hasHalfStar = rating % 1 !== 0;
+    const emptyStars = 5 - fullStars - (hasHalfStar ? 1 : 0);
+
+    return `${"★".repeat(fullStars)}${hasHalfStar ? "☆" : ""}${"☆".repeat(emptyStars)}`;
+};
+---
+
+<section class="h-auto flex items-center justify-center px-4 md:px-10 pt-20 pb-40 md:border max-w-screen-xl mx-auto mb-5">
+    <div class="w-full">
+        <div class="max-w-[230px] md:max-w-[400px] lg:max-w-[800px] mx-auto text-center">
+            <h2 class="md:font-semibold text-xl md:text-4xl mb-1">{t.title}</h2>
+            <h3 class="text-xl md:text-2xl font-extralight mt-6">{t.subtitle}</h3>
+        </div>
+        <div class="mt-10 flex flex-wrap gap-10 justify-center">
+            {
+                t.testimonials.map((item:testimonialItem) => (
+                    <article class="border w-full md:w-[45%] flex flex-col md:flex-row items-center md:items-start gap-4">
+                        <div class="w-full md:w-1/2 h-full">
+                            <img src={item.imageUrl} alt={item.author} class="w-full h-full object-cover">
+                        </div>
+                        
+                        <div class="w-full md:w-1/2 p-6">
+                            <h5 class="text-3xl font-extrabold">{item.author}</h5>
+                            <p class="text-[15px] font-light">{item.business}, {item.country}</p>
+                            <p class="text-yellow-400 text-lg mb-5">{getStars(item.rating)}</p>
+                            <p class="text-[16px] font-light mt-2">{item.text}</p>
+                        </div>
+                    </article>
+                ))
+            }
+        </div>
+    </div>
+</section>

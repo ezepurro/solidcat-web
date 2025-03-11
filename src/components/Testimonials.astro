@@ -28,18 +28,18 @@ const getStars = (rating: number) => {
         <div class="mt-10 flex flex-wrap gap-10 justify-center">
             {
                 t.testimonials.map((item:testimonialItem) => (
-                    <article class="border w-full md:w-[45%] flex flex-col md:flex-row items-center md:items-start gap-4">
-                        <div class="w-full md:w-1/2 h-full">
-                            <img src={item.imageUrl} alt={item.author} class="w-full h-full object-cover">
-                        </div>
-                        
-                        <div class="w-full md:w-1/2 p-6">
-                            <h5 class="text-xl font-extrabold">{item.author}</h5>
-                            <p class="text-xs font-light">{item.business}, {item.country}</p>
-                            <p class="text-yellow-400 text-lg mb-5">{getStars(item.rating)}</p>
-                            <p class="text-[14px] font-light mt-2">{item.text}</p>
-                        </div>
-                    </article>
+                <article class="border w-full md:w-[45%] flex flex-col md:flex-row items-center md:items-start gap-2 shadow-lg shadow-[#ffffff5b] relative">
+                    <div class="md:w-1/2 w-full md:h-auto h-50 overflow-hidden">
+                        <img src={item.imageUrl} alt={item.author} class="w-full h-full object-cover">
+                    </div>
+                    
+                    <div class="w-full md:w-1/2 p-4">
+                        <h5 class="text-xl font-extrabold leading-tight">{item.author}</h5>
+                        <p class="text-xs font-light leading-tight">{item.business}, {item.country}</p>
+                        <p class="text-yellow-400 text-lg mb-3">{getStars(item.rating)}</p>
+                        <p class="text-[14px] font-light mt-2 leading-tight">{item.text}</p>
+                    </div>
+                </article>
                 ))
             }
         </div>

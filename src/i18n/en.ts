@@ -1,83 +1,105 @@
-{
+import BeautyBloom from "../assets/clients/BeautyBloom.astro";
+
+export const en = {
     "navbar": {
         "items": [
             {
-                "title": "Productos",
+                "title": "Products",
                 "url": "/products"
             },
             {
-                "title": "Precios",
+                "title": "Pricing",
                 "url": "/pricing"
             }
         ],
         "getStartedButton": {
-            "title": "Empezar",
+            "title": "Get Started",
             "url": "/get-started"
         }
     },
     "hero": {
-        "title": "Soluciones digitales para empresas en crecimiento",
-        "getStartedButton": "Empezar"
+        "title": "Digital solutions for growing business",
+        "subtitle": "We transform your vision into digital growth",
+        "getStartedButton": "Get Started",
+        "trustedBy": "Trusted by our clients",
+        "clients": [
+            {
+                "title": "Beauty Bloom",
+                "file": BeautyBloom
+            }
+        ]
+    },
+    "slogan": {
+        "firstPart": "solid code,",
+        "secondPart": "agile ideas"
     },
     "howDoWeWork": {
-        "title": "Como trabajamos",
-        "subtitle": "Soluciones a medida o preconstruidas, siempre optimizadas para tu negocio",
+        "title": "How do we work",
+        "subtitle": "Custom or pre-built solutions, always optimized for you",
         "howDoWeWorkItems": [
             {
-                "title": "Soluciones prediseñadas",
+                "title": "Prebuilt Solutions",
                 "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin molestie diam ligula, vitae ornare erat tempor in. Vestibulum auctor bibendum aliquet.",
-                "redirectText": "Conocer más",
+                "redirectText": "Learn more",
                 "redirectUrl": "/products"
             },
             {
-                "title": "Soluciones a medida",
+                "title": "Custom Solutions",
                 "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin molestie diam ligula, vitae ornare erat tempor in. Vestibulum auctor bibendum aliquet.",
-                "redirectText": "Conocer más",
+                "redirectText": "Learn more",
                 "redirectUrl": "/custom-solutions"
             }
         ]
     },
     "testimonials": {
-        "title": "Que dicen nuestros clientes",
-        "subtitle": "Hemos resuelto exitosamente numerosos problemas de nuestros clientes",
+        "title": "What clients say",
+        "subtitle": "We have successfully resolved numerous issues for our clients",
         "testimonials": [
+            {
+                "author": "Valerio Fritelli",
+                "business": "UTN",
+                "country": "Arg",
+                "rating": 4,
+                "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus sagittis, nunc id gravida consequat, odio ante sodales augue, a efficitur mi nisl in libero.",
+                "imageUrl": "https://www.ultimatebeaver.com/wp-content/uploads/bb-plugin/cache/photo-gallery-img-02-circle.jpg"
+            },
             {
                 "author": "Zara Piskun",
                 "business": "Beauty Bloom",
                 "country": "Arg",
-                "rating": 4.5,
+                "rating": 5,
                 "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus sagittis, nunc id gravida consequat, odio ante sodales augue, a efficitur mi nisl in libero.",
-                "imageUrl": "https://www.ultimatebeaver.com/wp-content/uploads/bb-plugin/cache/photo-gallery-img-02-circle.jpg"
+                "imageUrl": "https://salondesmaires-gard.com/wp-content/uploads/2015/04/speaker-1-v2.jpg"
             }
         ]
     },
     "outro": {
-        "title": "Construimos algo increíble juntos?",
-        "paragraphOne": "Ya sea que necesites una solución de software potente o un sistema personalizado,",
-        "paragraphTwo": "estamos aquí para convertir tus ideas en realidad.",
-        "paragraphThree": "Contactanos!",
-        "getStartedText": "Empezar",
+        "title": "Shall we build something amazing together?",
+        "paragraphOne": "Whether you need a powerful software solution or a custom-built system,",
+        "paragraphTwo": "we’re here to turn your ideas into reality.",
+        "paragraphThree": "Let’s talk!",
+        "getStartedText": "Get started",
         "getStartedUrl": "/get-started"
     },
     "footer": {
         "links": [
             {
-                "text": "Productos",
+                "text": "Products",
                 "url": "/products",
                 "sublinks": [
                     {
-                        "text": "Turnero dinamico",
+                        "text": "Dynamic Scheduler",
                         "url": "/products#dynamic-scheduler"
                     }
                 ]
             },
             {
-                "text": "Precios",
+                "text": "Pricing",
                 "url": "/pricing",
                 "sublinks": null
             },
             {
-                "text": "Empezar",
+                "text": "Get Started",
                 "url": "/get-started",
                 "sublinks": null
             },
@@ -96,6 +118,6 @@
                 ]
             }
         ],
-        "copyright": "Todos los derechos reservados"
-    }  
+        "copyright": "All rights reserved"
+    }     
 }

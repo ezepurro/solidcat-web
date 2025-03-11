@@ -8,10 +8,6 @@
             {
                 "title": "Pricing",
                 "url": "/pricing"
-            },
-            {
-                "title": "FAQ",
-                "url": "/faq"
             }
         ],
         "getStartedButton": {
@@ -65,6 +61,42 @@
         "getStartedUrl": "/get-started"
     },
     "footer": {
-        
+        "links": [
+            {
+                "text": "Products",
+                "url": "/products",
+                "sublinks": [
+                    {
+                        "text": "Dynamic Scheduler",
+                        "url": "/products#dynamic-scheduler"
+                    }
+                ]
+            },
+            {
+                "text": "Pricing",
+                "url": "/pricing",
+                "sublinks": null
+            },
+            {
+                "text": "Get Started",
+                "url": "/get-started",
+                "sublinks": null
+            },
+            {
+                "text": "Social",
+                "url": null,
+                "sublinks": [
+                    {
+                        "text": "Linkedin",
+                        "url": "https://www.linkedin.com/company/solid-cat"
+                    },
+                    {
+                        "text": "Instagram",
+                        "url": "https://www.instagram.com/solidcat_/"
+                    }
+                ]
+            }
+        ],
+        "copyright": "All rights reserved"
     }     
 }

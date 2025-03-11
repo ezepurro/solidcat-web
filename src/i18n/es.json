@@ -8,10 +8,6 @@
             {
                 "title": "Precios",
                 "url": "/pricing"
-            },
-            {
-                "title": "Preguntas frecuentes",
-                "url": "/faq"
             }
         ],
         "getStartedButton": {
@@ -60,11 +56,47 @@
         "title": "Construimos algo increíble juntos?",
         "paragraphOne": "Ya sea que necesites una solución de software potente o un sistema personalizado,",
         "paragraphTwo": "estamos aquí para convertir tus ideas en realidad.",
-        "paragraphThree": "Hablanos!",
+        "paragraphThree": "Contactanos!",
         "getStartedText": "Empezar",
         "getStartedUrl": "/get-started"
     },
     "footer": {
-        
-    }   
+        "links": [
+            {
+                "text": "Productos",
+                "url": "/products",
+                "sublinks": [
+                    {
+                        "text": "Turnero dinamico",
+                        "url": "/products#dynamic-scheduler"
+                    }
+                ]
+            },
+            {
+                "text": "Precios",
+                "url": "/pricing",
+                "sublinks": null
+            },
+            {
+                "text": "Empezar",
+                "url": "/get-started",
+                "sublinks": null
+            },
+            {
+                "text": "Social",
+                "url": null,
+                "sublinks": [
+                    {
+                        "text": "Linkedin",
+                        "url": "https://www.linkedin.com/company/solid-cat"
+                    },
+                    {
+                        "text": "Instagram",
+                        "url": "https://www.instagram.com/solidcat_/"
+                    }
+                ]
+            }
+        ],
+        "copyright": "Todos los derechos reservados"
+    }  
 }

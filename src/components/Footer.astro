@@ -1,8 +1,46 @@
 ---
 const { t, lang } = Astro.props;
+
+const today = new Date();
+
+interface linkItem {
+    text: string,
+    url: string
+    sublinks: Array<Sublink>
+}
+
+interface Sublink {
+    text: string,
+    url: string
+}
 ---
 
-<footer class="bg-black text-white pt-20">
-    <hr>
-    <h1>footer</h1>
+<footer class="bg-black text-white pt-16 pb-8 border-t">
+    <div class="max-w-6xl mx-auto px-6 lg:px-8 flex flex-col lg:flex-row justify-between">
+        <!-- Logo -->
+        <div class="lg:w-1/4 flex justify-center lg:justify-start mb-8 lg:mb-0">
+            <img src="/solidcat-box.svg" alt="Solid Cat Brand" class="h-20">
+        </div>
+
+        <!-- Links -->
+        <div class="lg:w-3/4 grid grid-cols-2 md:grid-cols-4 gap-6 text-left">
+            {
+                t.links.map((link: linkItem) => (
+                    <div>
+                        <a href={`/${lang}${link.url}`} class="font-bold text-lg block">{link.text}</a>
+                        {
+                            link.sublinks && link.sublinks.map((sublink: Sublink) => (
+                                <a href={(!sublink.url.startsWith("/") ? `${sublink.url}` : `/${lang}${sublink.url}`)} class="text-gray-400 text-sm block">{sublink.text}</a>
+                            ))
+                        }
+                    </div>
+                ))
+            }
+        </div>
+    </div>
+
+    <!-- Copyright -->
+    <div class="text-center text-white text-sm mt-8 font-medium">
+        <p>© {today.getFullYear()} Solid Cat. {t.copyright}</p>
+    </div>
 </footer>

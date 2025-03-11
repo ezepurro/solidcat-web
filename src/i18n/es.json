@@ -21,8 +21,7 @@
     },
     "howDoWeWork": {
         "title": "Como trabajamos",
-        "sloganFirst": "código sólido,",
-        "sloganSecond": "ideas ágiles",
+        "subtitle": "Soluciones a medida o preconstruidas, siempre optimizadas para tu negocio",
         "howDoWeWorkItems": [
             {
                 "title": "Soluciones prediseñadas",

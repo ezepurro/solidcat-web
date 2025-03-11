@@ -21,8 +21,7 @@
     },
     "howDoWeWork": {
         "title": "How do we work",
-        "sloganFirst": "solid code,",
-        "sloganSecond": "agile ideas",
+        "subtitle": "Custom or pre-built solutions, always optimized for you",
         "howDoWeWorkItems": [
             {
                 "title": "Prebuilt Solutions",

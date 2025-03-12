@@ -39,13 +39,13 @@ export const en = {
         "howDoWeWorkItems": [
             {
                 "title": "Prebuilt Solutions",
-                "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin molestie diam ligula, vitae ornare erat tempor in. Vestibulum auctor bibendum aliquet.",
+                "description": "We offer pre-built digital solutions that can be fully customized to fit your needs. By adapting our existing products, we provide faster and more efficient results, saving you time and resources while maintaining high quality",
                 "redirectText": "Learn more",
                 "redirectUrl": "/products"
             },
             {
                 "title": "Custom Solutions",
-                "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin molestie diam ligula, vitae ornare erat tempor in. Vestibulum auctor bibendum aliquet.",
+                "description": "We create fully customized digital solutions tailored to your business. From concept to execution, we design and develop unique products that align with your specific goals, ensuring a perfect fit for your needs",
                 "redirectText": "Learn more",
                 "redirectUrl": "/custom-solutions"
             }
@@ -70,6 +70,24 @@ export const en = {
                 "rating": 5,
                 "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus sagittis, nunc id gravida consequat, odio ante sodales augue, a efficitur mi nisl in libero.",
                 "imageUrl": "https://salondesmaires-gard.com/wp-content/uploads/2015/04/speaker-1-v2.jpg"
+            }
+        ]
+    },
+    "faq": {
+        "title": "FAQ",
+        "subtitle": "Find answers to common questions about our services and process",
+        "faq": [
+            {
+                "question": "How long does it take to develop a digital solution?",
+                "answer": "The timeline depends on the complexity of the project. Pre-built solutions customized to your needs can be delivered in a matter of days or weeks, while fully custom solutions may take several months. We always work efficiently to ensure timely delivery"
+            },
+            {
+                "question": "How much does it cost to develop a digital solution?",
+                "answer": "The cost varies based on the type of solution. Pre-built solutions are more affordable and faster to implement, while fully custom solutions require more time and resources. Contact us for a personalized quote based on your needs"
+            },
+            {
+                "question": "Do you offer support and maintenance after development?",
+                "answer": "Yes! We provide ongoing support and maintenance to ensure your solution runs smoothly. Whether it's updates, bug fixes, or improvements, we're here to help!"
             }
         ]
     },

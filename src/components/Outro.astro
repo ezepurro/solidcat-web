@@ -5,9 +5,9 @@ const { t, lang } = Astro.props;
 <section class="h-auto flex items-center justify-center p-4 md:p-10 border max-w-screen-xl mx-auto">
     <div class="w-full">
         <h3 class="font-bold text-xl">{t.title}</h3>
-        <p class="text-[16px] font-light">{t.paragraphOne}</p>
-        <p class="text-[16px] font-light">{t.paragraphTwo}</p>
-        <p class="text-[16px] font-light mb-10">{t.paragraphThree}</p>
-        <a class="font-medium text-[18px] border py-2 px-4 hover:bg-[#fbf0ff] hover:text-[#2d1434] transition duration-400 ease-in-out rounded" href={`/${lang}${t.getStartedUrl}`}>{t.getStartedText}</a>
+        <p class="text-paragraph font-light">{t.paragraphOne}</p>
+        <p class="text-paragraph font-light">{t.paragraphTwo}</p>
+        <p class="text-paragraph font-light mb-10">{t.paragraphThree}</p>
+        <a class="font-medium text-get-started border py-2 px-4 hover:bg-solidcat-light hover:text-solidcat-primary transition duration-400 ease-in-out rounded" href={`/${lang}${t.getStartedUrl}`}>{t.getStartedText}</a>
     </div>
 </section>

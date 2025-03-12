@@ -15,12 +15,12 @@ interface Sublink {
 }
 ---
 
-<footer class="bg-black text-white pt-16 pb-8 border-t">
+<footer class="bg-black text-solidcat-light pt-16 pb-8 border-t">
     <div class="max-w-6xl mx-auto px-6 lg:px-8 flex flex-col lg:flex-row justify-between">
         <!-- Logo -->
         <div class="lg:w-1/4 flex justify-center lg:justify-start mb-12 lg:mb-0">
             <a href={`/${lang}`}>
-                <img src="/solidcat-box.svg" alt="Solid Cat Brand" class="h-20">
+                <img src="/src/assets/solidcat-box.svg" alt="Solid Cat Brand" class="h-20">
             </a>
         </div>
 
@@ -29,10 +29,10 @@ interface Sublink {
             {
                 t.links.map((link: linkItem) => (
                     <div>
-                        <a href={`/${lang}${link.url}`} class="font-bold text-lg block">{link.text}</a>
+                        <a href={(link.url) ? `/${lang}${link.url}` : null} class="font-bold text-lg block">{link.text}</a>
                         {
                             link.sublinks && link.sublinks.map((sublink: Sublink) => (
-                                <a href={!sublink.url.startsWith("/") ? `${sublink.url}` : `/${lang}${sublink.url}`} class="text-gray-200 text-sm block" target={!sublink.url.startsWith("/") ? '_blank' : ''}>{sublink.text}</a>
+                                <a href={!sublink.url.startsWith("/") ? `${sublink.url}` : `/${lang}${sublink.url}`} class="text-gray-200 text-sm block hover:text-gray-300" target={!sublink.url.startsWith("/") ? '_blank' : ''}>{sublink.text}</a>
                             ))
                         }
                     </div>

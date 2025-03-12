@@ -1,0 +1,45 @@
+---
+const { t } = Astro.props;
+
+interface faqItem {
+    question: string,
+    answer: string
+}
+---
+
+<section class="h-auto flex items-center justify-center p-4 md:p-10 border max-w-screen-xl mx-auto mb-10">
+    <div class="w-full">
+        <div class="p-4">
+            <h2 class="font-semibold text-xl">{t.title}</h2>
+            <p class="text-paragraph font-light">{t.subtitle}</p>
+        </div>
+        <div class="p-4">
+            {t.faq.map((faq: faqItem, index: number) => (
+                <div class="my-5 border-b pb-4">
+                    <div class="flex justify-between items-center cursor-pointer faq-question mb-2">
+                        <p class="font-bold">{faq.question}</p>
+                        <button class="transition-transform transform" id={`faq-btn-${index}`}>
+                            ⌄
+                        </button>
+                    </div>
+                    <p id={`faq-answer-${index}`} class="text-paragraph ml-3 hidden">{faq.answer}</p>
+                </div>
+            ))}
+        </div>
+    </div>
+</section>
+
+<script>
+    document.addEventListener("DOMContentLoaded", () => {
+        document.querySelectorAll(".faq-question").forEach((element, index) => {
+            element.addEventListener("click", () => {
+                const answer = document.getElementById(`faq-answer-${index}`);
+                const button = document.getElementById(`faq-btn-${index}`);
+                if (answer && button) {
+                    answer.classList.toggle("hidden");
+                    button.classList.toggle("rotate-180");
+                }
+            });
+        });
+    });
+</script>

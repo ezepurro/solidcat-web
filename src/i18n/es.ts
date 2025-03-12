@@ -39,13 +39,13 @@ export const es = {
         "howDoWeWorkItems": [
             {
                 "title": "Soluciones prediseñadas",
-                "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin molestie diam ligula, vitae ornare erat tempor in. Vestibulum auctor bibendum aliquet.",
+                "description": "Ofrecemos soluciones digitales prediseñadas que pueden personalizarse completamente según las necesidades de tu negocio. Al adaptar nuestros productos existentes, logramos resultados más rápidos y eficientes, ahorrando tiempo y recursos sin comprometer la calidad",
                 "redirectText": "Conocer más",
                 "redirectUrl": "/products"
             },
             {
                 "title": "Soluciones a medida",
-                "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin molestie diam ligula, vitae ornare erat tempor in. Vestibulum auctor bibendum aliquet.",
+                "description": "Creamos soluciones digitales totalmente personalizadas para tu negocio. Desde la idea hasta la implementación, diseñamos y desarrollamos productos únicos que se ajustan a tus objetivos específicos, garantizando una solución a tu medida",
                 "redirectText": "Conocer más",
                 "redirectUrl": "/custom-solutions"
             }
@@ -70,6 +70,24 @@ export const es = {
                 "rating": 5,
                 "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus sagittis, nunc id gravida consequat, odio ante sodales augue, a efficitur mi nisl in libero.",
                 "imageUrl": "https://salondesmaires-gard.com/wp-content/uploads/2015/04/speaker-1-v2.jpg"
+            }
+        ]
+    },
+    "faq": {
+        "title": "Preguntas frecuentes",
+        "subtitle": "Encuentra respuestas a las preguntas más comunes sobre nuestros servicios y procesos",
+        "faq": [
+            {
+                "question": "¿Cuánto tiempo tarda en desarrollarse una solución digital?",
+                "answer": "El tiempo de desarrollo depende de la complejidad del proyecto. Las soluciones preconstruidas y personalizadas pueden estar listas en días o semanas, mientras que los desarrollos a medida pueden tomar varios meses. Siempre trabajamos de manera eficiente para garantizar entregas a tiempo"
+            },
+            {
+                "question": "¿Cuánto cuesta desarrollar una solución digital?",
+                "answer": "El costo varía según el tipo de solución. Las soluciones preconstruidas son más accesibles y rápidas de implementar, mientras que las soluciones a medida requieren más tiempo y recursos. Contáctanos para obtener un presupuesto personalizado según tus necesidades"
+            },
+            {
+                "question": "¿Ofrecen soporte y mantenimiento después del desarrollo?",
+                "answer": "¡Sí! Brindamos soporte y mantenimiento continuo para garantizar el buen funcionamiento de tu solución. Ya sea para actualizaciones, corrección de errores o mejoras, estamos aquí para ayudarte"
             }
         ]
     },

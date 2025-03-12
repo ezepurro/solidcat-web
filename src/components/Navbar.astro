@@ -10,11 +10,11 @@ interface NavbarItem {
 <nav class="h-22 flex items-center justify-between px-6 w-full mx-auto max-w-screen-xl">
     <!-- Logo -->
     <a href={`/${lang}`} class="flex items-center">
-        <img src="/solidcat-box2.svg" alt="Solid Cat Brand" class="h-12">
+        <img src="/src/assets/solidcat-box2.svg" alt="Solid Cat Brand" class="h-12">
     </a>
 
     <!-- Mobile Button -->
-    <button id="menuButton" class="md:hidden text-white focus:outline-none">
+    <button id="menuButton" class="md:hidden text-solidcat-light focus:outline-none">
         <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
         </svg>
@@ -25,13 +25,13 @@ interface NavbarItem {
         <ul class="list-none flex space-x-8">
             {t.items.map((item: NavbarItem) => (
                 <li>
-                    <a href={`/${lang}${item.url}`} class="text-white text-lg hover:opacity-80 transition">
+                    <a href={`/${lang}${item.url}`} class="text-solidcat-light text-lg hover:opacity-80 transition duration-300">
                         {item.title}
                     </a>
                 </li>
             ))}
             <li>
-                <a href={`/${lang}${t.getStartedButton.url}`} class="text-black bg-[#fbf0ff] text-lg border rounded-xl px-4 py-2 hover:text-[#fbf0ff] hover:bg-[#2d1434] transition duration-300 ease-in-out font-bold">
+                <a href={`/${lang}${t.getStartedButton.url}`} class="text-solidcat-primary bg-solidcat-light text-lg border rounded-xl px-4 py-2 hover:text-solidcat-light hover:bg-solidcat-primary transition duration-300 ease-in-out font-bold">
                     {t.getStartedButton.title}
                 </a>
             </li>
@@ -40,13 +40,13 @@ interface NavbarItem {
 </nav>
 
 <!-- Mobile Menu -->
-<div id="mobileMenu" class="overflow-hidden max-h-0 opacity-0 md:hidden absolute top-20 left-0 w-full bg-[#2d1434] text-white flex flex-col items-center space-y-4 py-4 transition-all duration-300 ease-in-out">
+<div id="mobileMenu" class="overflow-hidden max-h-0 opacity-0 md:hidden absolute top-20 left-0 w-full bg-solidcat-primary text-solidcat-light flex flex-col items-center space-y-4 py-4 transition-all duration-300 ease-in-out">
     {t.items.map((item: NavbarItem) => (
-        <a href={`${lang}${item.url}`} class="text-lg hover:opacity-80 transition">
+        <a href={`/${lang}${item.url}`} class="text-lg hover:opacity-80 transition">
             {item.title}
         </a>
     ))}
-    <a href={`${lang}${t.getStartedButton.url}`} class="text-lg hover:opacity-80 transition">
+    <a href={`/${lang}${t.getStartedButton.url}`} class="text-lg hover:opacity-80 transition">
         {t.getStartedButton.title}
     </a>
 </div>

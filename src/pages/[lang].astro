@@ -32,15 +32,15 @@ const t = translations[locale];
       <Hero t={t.hero} lang={lang} />
     </div>
     <div class="bg-linear-to-b from-black to-solidcat-primary text-solidcat-light ">
-      <div class="h-auto px-4 md:px-10 py-10 border max-w-screen-xl mx-auto">
+      <div class="h-auto px-4 md:px-10 py-10 border rounded-xl max-w-screen-xl mx-auto">
         <Slogan t={t.slogan} />
         <HowDoWeWork t={t.howDoWeWork} lang={lang} />
       </div>
     </div>
     <div class="bg-linear-to-b from-solidcat-primary to-black text-solidcat-light pb-20">
-      <div class="h-auto px-4 md:px-10 py-10 border-x border-b max-w-screen-xl mx-auto">
+      <div class="h-auto px-4 md:px-10 py-10 border-x border-b rounded-xl max-w-screen-xl mx-auto">
+        <FAQ t={t.faq} />
         <!-- <Testimonials t={t.testimonials} /> -->
-         <FAQ t={t.faq} />
         <Outro t={t.outro} lang={lang} />
       </div>
     </div>

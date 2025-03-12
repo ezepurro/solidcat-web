@@ -7,7 +7,7 @@ interface faqItem {
 }
 ---
 
-<section class="h-auto flex items-center justify-center p-4 md:p-10 border max-w-screen-xl mx-auto mb-10">
+<section class="h-auto flex items-center justify-center p-4 md:p-10 border rounded-xl max-w-screen-xl mx-auto mb-10 bg-linear-to-b from-black to-solidcat-primary">
     <div class="w-full">
         <div class="p-4">
             <h2 class="font-semibold text-xl">{t.title}</h2>
@@ -22,7 +22,7 @@ interface faqItem {
                             ⌄
                         </button>
                     </div>
-                    <p id={`faq-answer-${index}`} class="text-paragraph ml-3 hidden">{faq.answer}</p>
+                    <p id={`faq-answer-${index}`} class="text-paragraph mx-3 hidden">{faq.answer}</p>
                 </div>
             ))}
         </div>

@@ -1,5 +1,7 @@
 
 export const es = {
     "pageTitle": "Empezar",
-    "title": "Pagina de Empezar"
+    "title": {
+        "title": "Construyamos algo increíble juntos"
+    }
 }

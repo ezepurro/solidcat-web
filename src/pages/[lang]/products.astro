@@ -2,10 +2,13 @@
 import Layout from '../../layouts/Layout.astro';
 
 import Navbar from '../../components/Navbar.astro';
+import PagesHero from '../../components/PagesHero.astro';
 import Footer from '../../components/Footer.astro';
 
 import translations from '../../i18n/products';
 import navbarFooterTranslations from '../../i18n';
+import ProductsList from '../../components/products/ProductsList.astro';
+import Slogan from '../../components/Slogan.astro';
 
 export function getStaticPaths() {
   return [
@@ -21,10 +24,12 @@ const navbarFooter = navbarFooterTranslations[locale];
 ---
 
 <Layout lang={lang} title={t.pageTitle}>
-  <div class="h-screen bg-linear-to-b from-solidcat-primary to-black text-solidcat-light">
+  <div class="bg-linear-to-b from-solidcat-primary to-black text-solidcat-light">
     <Navbar t={navbarFooter.navbar} lang={lang} />
     <hr>
-    <h3 class="text-center text-4xl font-black">{t.title}</h3>
+    <PagesHero t={t.title} />
+    <Slogan t={navbarFooter.slogan} />
+    <ProductsList t={t.productsList} />
   </div>
   <Footer t={navbarFooter.footer} lang={lang} />
 </Layout>

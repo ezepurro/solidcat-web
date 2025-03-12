@@ -1,5 +1,7 @@
 
 export const es = {
     "pageTitle": "Precios",
-    "title": "Pagina de Precios"
+    "title": {
+        "title": "Elige un plan que se adapte a tu negocio"
+    }
 }

@@ -1,0 +1,18 @@
+---
+import Product from "./Product.astro";
+const { t } = Astro.props;
+
+interface productItem {
+
+}
+---
+
+<section class="h-auto flex items-center justify-center max-w-screen-xl mx-auto py-15">
+    <div class="w-full">
+        {
+            t.products.map((product:productItem) => (
+                <Product t={product} />
+            ))
+        }
+    </div>
+</section>

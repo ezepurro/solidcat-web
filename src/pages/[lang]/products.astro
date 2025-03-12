@@ -28,8 +28,10 @@ const navbarFooter = navbarFooterTranslations[locale];
     <Navbar t={navbarFooter.navbar} lang={lang} />
     <hr>
     <PagesHero t={t.title} />
-    <Slogan t={navbarFooter.slogan} />
-    <ProductsList t={t.productsList} />
+    <div class="mx-2 md:mx-0">
+      <Slogan t={navbarFooter.slogan} />
+      <ProductsList t={t.productsList} />
+    </div>
   </div>
   <Footer t={navbarFooter.footer} lang={lang} />
 </Layout>

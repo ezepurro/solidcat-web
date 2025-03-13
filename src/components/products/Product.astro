@@ -3,7 +3,7 @@ const { t } = Astro.props;
 ---
 
 <article class="grid grid-cols-1 md:grid-cols-4 md:grid-rows-3 gap-5 border rounded-xl p-4" id={t.id}>
-    <div class="col-span-1 md:col-span-2 border rounded-xl h-50 md:h-80 flex items-center justify-center p-4 text-center font-extralight hover:font-bold tracking-wide text-3xl md:text-4xl bg-gradient-to-t from-black to-solidcat-primary hover:scale-95 transform duration-300">
+    <div class="col-span-1 md:col-span-2 border rounded-xl h-50 md:h-80 flex items-center justify-center p-4 text-center font-normal md:font-extralight hover:font-bold tracking-wide text-2xl md:text-4xl bg-gradient-to-t from-black to-solidcat-primary hover:scale-95 transform duration-300">
         {t.title.toLocaleUpperCase()}
     </div>
     <div class="col-span-1 md:col-span-2 md:col-start-3 border rounded-xl h-50 md:h-80 flex items-center justify-center hover:scale-95 transform duration-300">

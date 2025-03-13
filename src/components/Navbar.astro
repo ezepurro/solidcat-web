@@ -40,7 +40,8 @@ interface NavbarItem {
 </nav>
 
 <!-- Mobile Menu -->
-<div id="mobileMenu" class="overflow-hidden max-h-0 opacity-0 md:hidden absolute top-20 left-0 w-full bg-solidcat-primary text-solidcat-light flex flex-col items-center space-y-4 py-4 transition-all duration-300 ease-in-out">
+<!-- <div id="mobileMenu" class="overflow-hidden max-h-0 opacity-0 md:hidden absolute top-20 left-0 w-full bg-solidcat-primary text-solidcat-light flex flex-col items-center space-y-4 py-4 transition-all duration-300 ease-in-out"> -->
+<div id="mobileMenu" class="overflow-hidden max-h-0 opacity-0 md:hidden w-full bg-solidcat-primary text-solidcat-light flex flex-col items-center space-y-4 py-4 transition-all duration-300 ease-in-out">
     {t.items.map((item: NavbarItem) => (
         <a href={`/${lang}${item.url}`} class="text-lg hover:opacity-80 transition">
             {item.title}

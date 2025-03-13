@@ -21,7 +21,9 @@ interface howDoWeWorkItem {
                     <article class="border-x border-t rounded-xl p-4 md:p-10 px-4 w-full md:w-[50%] text-left bg-linear-to-b from-black to-solidcat-primary intersect:motion-translate-y-in-25">
                         <h4 class="font-semibold text-xl mb-1">{item.title}</h4>
                         <p class="font-light text-paragraph mb-4">{item.description}</p>
-                        <a class="font-normal text-sm text-cyan-500 hover:text-cyan-700 hover:underline underline-offset-4 transition duration-300 " href={`${lang}${item.redirectUrl}`}>{item.redirectText}</a>
+                        <a class="font-normal text-sm text-cyan-500 hover:text-cyan-700 hover:underline underline-offset-4 transition duration-300" href={`/${lang}${item.redirectUrl}`}>
+                            {item.redirectText}
+                        </a>
                     </article>
                 ))
             }

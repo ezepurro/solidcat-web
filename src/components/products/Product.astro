@@ -3,27 +3,31 @@ const { t } = Astro.props;
 ---
 
 <article class="grid grid-cols-1 md:grid-cols-4 md:grid-rows-3 gap-5 border rounded-xl p-4" id={t.id}>
-    <div class="col-span-1 md:col-span-2 border rounded-xl h-50 md:h-80 flex items-center justify-center p-4 text-center font-bold tracking-wide text-3xl md:text-4xl/12 bg-gradient-to-t from-black to-solidcat-primary">
-        {t.title}
+    <div class="col-span-1 md:col-span-2 border rounded-xl h-50 md:h-80 flex items-center justify-center p-4 text-center font-extralight hover:font-bold tracking-wide text-3xl md:text-4xl bg-gradient-to-t from-black to-solidcat-primary hover:scale-95 transform duration-300">
+        {t.title.toLocaleUpperCase()}
     </div>
-    <div class="col-span-1 md:col-span-2 md:col-start-3 border rounded-xl h-50 md:h-80 flex items-center justify-center">
+    <div class="col-span-1 md:col-span-2 md:col-start-3 border rounded-xl h-50 md:h-80 flex items-center justify-center hover:scale-95 transform duration-300">
         <img src={t.secondaryImg} alt={t.title} class="h-full w-full object-cover rounded-xl">
     </div>
-    <div class="border rounded-xl h-50 md:h-80 flex items-center justify-center p-4 text-center md:text-left font-extralight text-2xl md:text-3xl bg-gradient-to-b from-black to-solidcat-primary">
-        ***
-        {t.firstSlogan.toLocaleUpperCase()}
+    <div class="border rounded-xl h-50 md:h-80 flex items-center justify-center p-4 text-center md:text-left font-extralight hover:font-bold text-2xl md:text-3xl bg-gradient-to-b from-black to-solidcat-primary hover:scale-95 transform duration-300">
+        <p class="max-w-[75%]">
+            ***
+            {t.firstSlogan.toLocaleUpperCase()}
+        </p>
     </div>
-    <div class="col-span-1 md:col-span-2 border rounded-xl h-50 md:h-80 flex items-center justify-center">
+    <div class="col-span-1 md:col-span-2 border rounded-xl h-50 md:h-80 flex items-center justify-center hover:scale-95 transform duration-300">
         <img src={t.primaryImg} alt={t.title} class="h-full w-full object-cover rounded-xl">
     </div>
-    <div class="col-span-1 md:col-span-2 md:col-start-1 md:row-start-3 border rounded-xl h-50 md:h-80 flex items-center justify-center">
+    <div class="col-span-1 md:col-span-2 md:col-start-1 md:row-start-3 border rounded-xl h-50 md:h-80 flex items-center justify-center hover:scale-95 transform duration-300">
         <img src={t.tertiaryImg} alt={t.title} class="h-full w-full object-cover rounded-xl">
     </div>
-    <div class="border rounded-xl h-50 md:h-80 flex items-center justify-center p-4 text-center md:text-right font-extralight text-2xl md:text-3xl bg-gradient-to-b from-black to-solidcat-primary">
-        {t.secondarySlogan.toLocaleUpperCase()}
-        ***
+    <div class="border rounded-xl h-50 md:h-80 flex items-center justify-center p-4 text-center md:text-right font-extralight hover:font-bold text-2xl md:text-3xl bg-gradient-to-b from-black to-solidcat-primary hover:scale-95 transform duration-300">
+        <p class="max-w-[90%]">
+            {t.secondarySlogan.toLocaleUpperCase()}
+            ***
+        </p>
     </div>
-    <div class="border rounded-xl h-auto flex items-center justify-center text-left font-light text-lg md:text-paragraph md:text-right p-4 bg-gradient-to-b from-black to-solidcat-primary md:row-span-2 md:col-start-4 md:row-start-2">
+    <div class="border rounded-xl h-auto flex items-center justify-center text-left font-extralight text-lg md:text-paragraph md:text-right p-4 bg-gradient-to-b from-black to-solidcat-primary md:row-span-2 md:col-start-4 md:row-start-2 hover:scale-95 transform duration-300">
         <ul>
             {
                 t.features.map((feature:string) => (

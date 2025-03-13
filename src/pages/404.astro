@@ -1,0 +1,20 @@
+---
+import Layout from '../layouts/Layout.astro';
+
+import Navbar from '../components/Navbar.astro';
+import NotFound from '../components/404/NotFound.astro';
+import Footer from '../components/Footer.astro';
+
+import translations from '../i18n';
+
+
+const t = translations["en"];
+---
+<Layout lang="en">
+    <div class="h-screen bg-linear-to-b from-solidcat-primary to-black text-solidcat-light">
+        <Navbar t={t.navbar} lang="en" />
+        <hr>
+        <NotFound />
+    </div>
+    <Footer t={t.footer} lang="en" />
+</Layout>

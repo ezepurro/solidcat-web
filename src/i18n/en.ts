@@ -105,10 +105,10 @@ export const en = {
                 "text": "Products",
                 "url": "/products",
                 "sublinks": [
-                    {
-                        "text": "Dynamic Scheduler",
-                        "url": "/products#dynamic-scheduler"
-                    }
+                    // {
+                    //     "text": "Dynamic Scheduler",
+                    //     "url": "/products#dynamic-scheduler"
+                    // }
                 ]
             },
             {

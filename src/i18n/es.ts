@@ -105,10 +105,10 @@ export const es = {
                 "text": "Productos",
                 "url": "/products",
                 "sublinks": [
-                    {
-                        "text": "Turnero dinamico",
-                        "url": "/products#dynamic-scheduler"
-                    }
+                    // {
+                    //     "text": "Turnero dinamico",
+                    //     "url": "/products#dynamic-scheduler"
+                    // }
                 ]
             },
             {

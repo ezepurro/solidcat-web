@@ -8,9 +8,11 @@ import Testimonials from '../components/Testimonials.astro';
 import FAQ from '../components/FAQ.astro';
 import Outro from '../components/Outro.astro';
 import Footer from '../components/Footer.astro';
+import ObserverLoader from "../components/ObserverLoader.astro";
 
 import translations from '../i18n';
 import Slogan from '../components/Slogan.astro';
+
 
 export function getStaticPaths() {
   return [
@@ -26,23 +28,25 @@ const t = translations[locale];
 
 
 <Layout lang={lang} t={t.navbar}>
-    <div class="h-screen bg-linear-to-b from-solidcat-primary to-black text-solidcat-light">
-      <Navbar t={t.navbar} lang={lang} />
-      <hr>    
-      <Hero t={t.hero} lang={lang} />
+  <ObserverLoader />
+
+  <div class="h-screen bg-linear-to-b from-solidcat-primary to-black text-solidcat-light">
+    <Navbar t={t.navbar} lang={lang} />
+    <hr>    
+    <Hero t={t.hero} lang={lang} />
+  </div>
+  <div class="bg-linear-to-b from-black to-solidcat-primary text-solidcat-light ">
+    <div class="h-auto px-4 md:px-10 py-10 border rounded-xl max-w-screen-xl mx-auto">
+      <Slogan t={t.slogan} />
+      <HowDoWeWork t={t.howDoWeWork} lang={lang} />
     </div>
-    <div class="bg-linear-to-b from-black to-solidcat-primary text-solidcat-light ">
-      <div class="h-auto px-4 md:px-10 py-10 border rounded-xl max-w-screen-xl mx-auto">
-        <Slogan t={t.slogan} />
-        <HowDoWeWork t={t.howDoWeWork} lang={lang} />
-      </div>
+  </div>
+  <div class="bg-linear-to-b from-solidcat-primary to-black text-solidcat-light pb-20">
+    <div class="h-auto px-4 md:px-10 py-10 border-x border-b rounded-xl max-w-screen-xl mx-auto">
+      <FAQ t={t.faq} />
+      <!-- <Testimonials t={t.testimonials} /> -->
+      <Outro t={t.outro} lang={lang} />
     </div>
-    <div class="bg-linear-to-b from-solidcat-primary to-black text-solidcat-light pb-20">
-      <div class="h-auto px-4 md:px-10 py-10 border-x border-b rounded-xl max-w-screen-xl mx-auto">
-        <FAQ t={t.faq} />
-        <!-- <Testimonials t={t.testimonials} /> -->
-        <Outro t={t.outro} lang={lang} />
-      </div>
-    </div>
-    <Footer t={t.footer} lang={lang} />
+  </div>
+  <Footer t={t.footer} lang={lang} />
 </Layout>

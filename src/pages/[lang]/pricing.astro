@@ -1,6 +1,6 @@
 ---
 import Layout from '../../layouts/Layout.astro';
-
+import Plan from '../../components/pricing/Plan.astro';
 import Navbar from '../../components/Navbar.astro';
 import PagesHero from '../../components/PagesHero.astro';
 import Footer from '../../components/Footer.astro';
@@ -22,10 +22,14 @@ const navbarFooter = navbarFooterTranslations[locale];
 ---
 
 <Layout lang={lang} title={t.pageTitle}>
-  <div class="h-screen bg-linear-to-b from-solidcat-primary to-black text-solidcat-light">
+  <div class="h-screen w-full bg-linear-to-b from-solidcat-primary to-black text-solidcat-light">
     <Navbar t={navbarFooter.navbar} lang={lang} />
-    <hr>
     <PagesHero t={t.title} />
+    <section class="built-in-products__container flex justify-center align-middle gap-5 w-full">
+      <Plan t={t.title} />
+      
+    </section>
+
   </div>
   <Footer t={navbarFooter.footer} lang={lang} />
 </Layout>

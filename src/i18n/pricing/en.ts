@@ -2,6 +2,8 @@
 export const en = {
     "pageTitle": "Pricing",
     "title": {
-        "title": "Choose a plan that fits your business"
-    }
+        "title": "Focus on the product, not price",
+        "product" : "Buy it now"
+    },
+    
 }

@@ -21,7 +21,9 @@ export const en = {
                     "Integration with Mercado Pago for seamless payments",
                     "Customizable appointment scheduling",
                     "Admin panel for managing bookings and clients"
-                ]
+                ],
+                "productDatasheet": "/pdf/en/smartSched.pdf",
+                "productDatasheetText": "Learn More – Download Datasheet"
             }
         ]
     }

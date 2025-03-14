@@ -21,7 +21,9 @@ export const es = {
                     "Integración con Mercado Pago para pagos sin complicaciones",
                     "Agendamiento de turnos personalizable",
                     "Panel de administración para gestionar reservas y clientes"
-                ]
+                ],
+                "productDatasheet": "/pdf/es/smartSched.pdf",
+                "productDatasheetText": "Descubre más – Descarga la ficha técnica"
             }
         ]
     }

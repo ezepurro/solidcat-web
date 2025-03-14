@@ -5,5 +5,8 @@ export const en = {
         "title": "Focus on the product, not price",
         "product" : "Buy it now"
     },
+    "plan": {
+
+    }
     
 }

@@ -22,14 +22,12 @@ const navbarFooter = navbarFooterTranslations[locale];
 ---
 
 <Layout lang={lang} title={t.pageTitle}>
-  <div class="h-screen w-full bg-linear-to-b from-solidcat-primary to-black text-solidcat-light">
+  <div class="w-full bg-linear-to-b from-solidcat-primary to-black text-solidcat-light">
     <Navbar t={navbarFooter.navbar} lang={lang} />
     <PagesHero t={t.title} />
     <section class="built-in-products__container flex justify-center align-middle gap-5 w-full">
-      <Plan t={t.title} description="Un turnero automatico"  name="Turnero Automatico" />
-      
+      <Plan t={t.plan} />
     </section>
-
   </div>
   <Footer t={navbarFooter.footer} lang={lang} />
 </Layout>

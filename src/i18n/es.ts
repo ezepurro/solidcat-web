@@ -7,10 +7,10 @@ export const es = {
                 "title": "Productos",
                 "url": "/products"
             },
-            {
-                "title": "Precios",
-                "url": "/pricing"
-            }
+            // {
+            //     "title": "Precios",
+            //     "url": "/pricing"
+            // }
         ],
         "getStartedButton": {
             "title": "Empezar",
@@ -113,7 +113,7 @@ export const es = {
             },
             {
                 "text": "Precios",
-                "url": "/pricing",
+                // "url": "/pricing",
                 "sublinks": null
             },
             {
@@ -131,7 +131,7 @@ export const es = {
                     },
                     {
                         "text": "Instagram",
-                        "url": "https://www.instagram.com/solidcat_/"
+                        "url": "https://www.instagram.com/solidcat.dev/"
                     }
                 ]
             }

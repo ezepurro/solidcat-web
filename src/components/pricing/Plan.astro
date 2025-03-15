@@ -1,16 +1,16 @@
 ---
-const { t, pricing , description , name , image } = Astro.props;
+const { t } = Astro.props;
 ---
 
 
 <div class="pricing-plan h-100 w-100 p-10.5 flex-col color-white gap-4 border-4 border-white rounded-[8px]">
     <div class="info-container flex">
         <div class="words-container h-80 flex-col justify-center align-center gap-2">
-            <h1>{name}</h1>
-            <p>{description}</p>
+            <h1>{t.name}</h1>
+            <p>{t.description}</p>
         </div>
         <div class="image-container">
-            <img src={image} alt={name}>
+            <img src={t.image} alt={t.name}>
         </div>
     </div>
     <button class="flex w-full justify-center">

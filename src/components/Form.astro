@@ -1,7 +1,7 @@
 ---
 import PublicityCard from "./PublicityCard.astro";
 
-// const handleChange = (e: Event): void => {
+// const handleChange = (e: Event): void =>  {
 //   const target = e.target as HTMLSelectElement; // Cast al tipo correcto
 //   const value = target.value;
 //   if (value === 'true') {
@@ -13,7 +13,7 @@ import PublicityCard from "./PublicityCard.astro";
 // };
 ---
 
-<div class="relative w-full h-full flex justify-center gap-6 p-6 bg-linear-to-b from-black to-solidcat-primary motion-translate-y-in-25 motion-delay-400 motion-opacity-in-0">
+<div class="rounded-xl relative w-full h-full flex justify-center gap-6 p-6 bg-linear-to-b from-black to-solidcat-primary motion-translate-y-in-25 motion-delay-400 motion-opacity-in-0">
   <form class="flex-col w-full h-full border-white">
     <div class="flex-col  h-auto w-full gap-70 border-white gap-5">
       <input class="w-full rounded-15px bg-transparent flex justify-center m-3 border-2 border-white w-30 h-10 placeholder:text-center" name="enterprise_name" placeholder="Tu nombre"/>
@@ -26,6 +26,6 @@ import PublicityCard from "./PublicityCard.astro";
         <option class="flex justify-center border-white" value="false">Not Personalized</option>
     </select>
     <p class="flex justify-center">Contanos mas acerca de tu producto</p>
-    <input class="h-50 border-1 focus:border-red-660 w-full  flex justify-center" type="text" class="is_personalized" name="personalized_input" id="personalized_input" />
+    <input class="h-50 border-1 focus:border-red-660 w-full text-center flex justify-center" type="text" class="is_personalized" name="personalized_input" id="personalized_input" />
   </form>
 </div>

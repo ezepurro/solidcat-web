@@ -1,8 +1,7 @@
-// @ts-check
 import { defineConfig } from 'astro/config';
 import tailwindcss from "@tailwindcss/vite";
+import sitemap from '@astrojs/sitemap';
 
-// https://astro.build/config
 export default defineConfig({
     devToolbar: {
         enabled: false,
@@ -10,4 +9,6 @@ export default defineConfig({
     vite: {
         plugins: [tailwindcss()],
     },
+    site: 'https://www.solidcat.dev',
+    integrations: [sitemap()],
 });

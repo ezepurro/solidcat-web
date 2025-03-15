@@ -19,12 +19,13 @@ const { lang } = Astro.params;
 const locale = lang === 'es' ? 'es' : 'en'; 
 const t = translations[locale];
 const navbarFooter = navbarFooterTranslations[locale];
+
+const metaDescription = "Need a tailored software solution? Solid Cat develops custom software to meet your unique business challenges. Let's build together!";
 ---
 
-<Layout lang={lang} title={t.pageTitle}>
+<Layout lang={lang} title={t.pageTitle} description={metaDescription}>
   <div class="h-screen bg-linear-to-b from-solidcat-primary to-black text-solidcat-light">
     <Navbar t={navbarFooter.navbar} lang={lang} />
-    <hr>
     <PagesHero t={t.title} />
   </div>
   <Footer t={navbarFooter.footer} lang={lang} />

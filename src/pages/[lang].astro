@@ -24,10 +24,12 @@ export function getStaticPaths() {
 const { lang } = Astro.params;
 const locale = lang === 'es' ? 'es' : 'en'; 
 const t = translations[locale];
+
+const metaDescription = "Solid Cat is a reliable and professional software development company. Discover our services and take your business to the next level";
 ---
 
 
-<Layout lang={lang} t={t.navbar}>
+<Layout lang={lang} t={t.navbar} description={metaDescription}>
   <ObserverLoader />
 
   <div class="h-screen bg-linear-to-b from-solidcat-primary to-black text-solidcat-light">

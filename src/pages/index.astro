@@ -1,16 +1,36 @@
 ---
+import "../styles/global.css";
 const defaultLang = 'es';
 ---
 
 <html lang={defaultLang}>
   <head>
-    <meta http-equiv="refresh" content="0; url=/{defaultLang}" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Solid Cat | Software Development</title>
+    <meta name="description" content="Solid Cat es una empresa de desarrollo de software confiable y profesional. Conoce nuestros servicios.">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://www.solidcat.dev/es">
+  </head>
+  <body class="h-screen bg-linear-to-b from-solidcat-primary to-black">
+
+    <!-- SEO content for bots -->
+    <div hidden aria-hidden="true">
+      <h1>Bienvenido a Solid Cat</h1>
+      <p>Solid Cat es una empresa especializada en desarrollo de software y soluciones digitales innovadoras.</p>
+      <p>Explora nuestros servicios de desarrollo web, software a medida y consultoría tecnológica.</p>
+    </div>
+
+    <!-- Alternative for no JS bots -->
+    <noscript>
+      <meta http-equiv="refresh" content="0;url=/es">
+      <p>Si la redirección no funciona, haz <a href="/es">clic aquí</a>.</p>
+    </noscript>
+
+    <!-- JS Redirect -->
     <script>
       window.location.href = "/es";
     </script>
-  </head>
-  <body>
-	<div class="bg-solidcat-primary h-screen">
-	</div>
+    
   </body>
 </html>

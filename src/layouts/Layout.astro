@@ -1,6 +1,7 @@
 ---
 import "../styles/global.css";
-const { lang, title } = Astro.props;
+const { lang, title, description } = Astro.props;
+const metaDescription = description || "Solid Cat: Software Development & Web Solutions.";
 ---
 
 <!doctype html>
@@ -8,6 +9,11 @@ const { lang, title } = Astro.props;
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width" />
+		<meta name="description" content={metaDescription}>
+		
+		<link rel="alternate" hreflang="es" href="https://www.solidcat.dev/es">
+		<link rel="alternate" hreflang="en" href="https://www.solidcat.dev/en">
+
 		<title>{title ? `${title} | Solid Cat` : 'Solid Cat'}</title>
 
 		<!-- Favicon -->

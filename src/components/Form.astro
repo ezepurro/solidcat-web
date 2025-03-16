@@ -1,0 +1,31 @@
+---
+import PublicityCard from "./PublicityCard.astro";
+
+// const handleChange = (e: Event): void =>  {
+//   const target = e.target as HTMLSelectElement; // Cast al tipo correcto
+//   const value = target.value;
+//   if (value === 'true') {
+//     const personalized = document.querySelector('.is_personalized');
+//     if (personalized) {
+//       personalized.style.display = 'none'; // Usamos `style` para modificar el CSS
+//     }
+//   }
+// };
+---
+
+<div class="rounded-xl relative w-full h-full flex justify-center gap-6 p-6 bg-linear-to-b from-black to-solidcat-primary motion-translate-y-in-25 motion-delay-400 motion-opacity-in-0">
+  <form class="flex-col items-center w-full h-full border-white">
+    <div class="flex-col justify-center items-center  h-auto w-full gap-70 border-white gap-5">
+      <input class="w-full rounded-xl bg-transparent flex justify-center m-3 border-2 border-white w-30 h-10 placeholder:text-center" name="enterprise_name" placeholder="Tu nombre"/>
+      <input class="w-full rounded-xl bg-transparent flex justify-center m-3 border-2   border-white w-30 h-10 placeholder:text-center" name="email" type="text" placeholder="Tu email" />
+      <input class="w-full rounded-xl bg-transparent flex justify-center m-3 border-2 rounded-125px border-white w-30 h-10 placeholder:text-center" name="contact" type="text" placeholder="Tu Contacto"/>
+    </div>
+    <select class="text-white-700 w-full h-10 p-8 border-white mt-23 mb-23  text-center w-48 px-4 py-2 border-2  rounded-lg flex justify-center appearance-none bg-transparent focus:outline-none"  name="select"> <!-- Pasamos la referencia a la función -->
+        <option disabled selected class=" bg-solidcat-primary">SELECCIONA TU PRODUCTO</option>
+        <option class="flex justify-center border-white bg-solidcat-primary " value="true">Personalized</option>
+        <option class="flex justify-center border-white bg-solidcat-primary " value="false">Not Personalized</option>
+    </select>
+    <p class="flex justify-center">Contanos mas acerca de tu producto</p>
+    <input class="h-auto border-1 focus:border-red-660 w-full text-center flex justify-center" type="text" class="is_personalized" name="personalized_input" id="personalized_input" />
+  </form>
+</div>

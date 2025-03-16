@@ -46,8 +46,8 @@ export const es = {
             {
                 "title": "Soluciones a medida",
                 "description": "Creamos soluciones digitales totalmente personalizadas para tu negocio. Desde la idea hasta la implementación, diseñamos y desarrollamos productos únicos que se ajustan a tus objetivos específicos, garantizando una solución a tu medida",
-                "redirectText": "Conocer más",
-                "redirectUrl": "/custom-solutions"
+                // "redirectText": "Conocer más",
+                // "redirectUrl": "/custom-solutions"
             }
         ]
     },

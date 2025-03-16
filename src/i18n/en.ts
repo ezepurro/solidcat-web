@@ -46,8 +46,8 @@ export const en = {
             {
                 "title": "Custom Solutions",
                 "description": "We create fully customized digital solutions tailored to your business. From concept to execution, we design and develop unique products that align with your specific goals, ensuring a perfect fit for your needs",
-                "redirectText": "Learn more",
-                "redirectUrl": "/custom-solutions"
+                // "redirectText": "Learn more",
+                // "redirectUrl": "/custom-solutions"
             }
         ]
     },

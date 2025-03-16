@@ -12,5 +12,5 @@ export default defineConfig({
         plugins: [tailwindcss()],
     },
     site: 'https://www.solidcat.dev',
-    integrations: [sitemap(), react()],
+    integrations: [sitemap()],
 });

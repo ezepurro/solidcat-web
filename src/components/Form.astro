@@ -1,3 +1,6 @@
+---
+const { t } = Astro.props
+---
 <div class="rounded-xl relative w-full h-full flex flex-col items-center gap-6 p-6 bg-gradient-to-b from-black to-solidcat-primary motion-translate-y-in-25 motion-delay-400 motion-opacity-in-0">
   <form 
     class="flex flex-col items-center w-full max-w-lg border-white"
@@ -8,14 +11,14 @@
     <input type="hidden" name="_redirect" value="https://tu-dominio.com/pagina-de-gracias">
 
     <div class="flex flex-col justify-center items-center w-full gap-5">
-      <input class="w-full rounded-xl bg-transparent border-2 border-white h-13 p-3 placeholder:text-center text-white" name="enterprise_name" placeholder="Tu nombre" required />
-      <input class="w-full rounded-xl bg-transparent border-2 border-white h-13 p-3 placeholder:text-center text-white" name="email" type="email" placeholder="Tu email" required />
-      <input class="w-full rounded-xl bg-transparent border-2 border-white h-13 p-3 placeholder:text-center text-white" name="contact" type="text" placeholder="Tu Contacto" />
+      <input class="w-full rounded-xl bg-transparent border-2 border-white h-13 p-3 placeholder:text-center text-white" name="enterprise_name" placeholder={t.name} required />
+      <input class="w-full rounded-xl bg-transparent border-2 border-white h-13 p-3 placeholder:text-center text-white" name="email" type="email" placeholder={t.email} required />
+      <input class="w-full rounded-xl bg-transparent border-2 border-white h-13 p-3 placeholder:text-center text-white" name="contact" type="text" placeholder={t.contact} />
     </div>
 
     <div class="flex flex-col gap-2.5 justify-center mt-10 text-center">
-      <h2 class="bg-white text-solidcat-primary text-3xl font-bold md:text-3xl px-4 py-2 rounded-lg">DESARROLLEMOS JUNTOS</h2>
-      <h2 class="text-white text-5xl font-bold md:text-8xl">TU NUEVA IDEA</h2>
+      <h2 class="bg-white text-solidcat-primary text-3xl font-bold md:text-3xl px-4 py-2 rounded-lg">{t.title1}</h2>
+      <h2 class="text-white text-5xl font-bold md:text-8xl">{t.title2}</h2>
     </div>   
 
     <div class="flex justify-center text-white mt-6">
@@ -24,7 +27,7 @@
       </svg>
     </div>
     <textarea 
-      placeholder="¿Qué ronda por tu cabeza?..." 
+      placeholder={t.placeholder} 
       class="border-white border-2 rounded-xl h-40 w-full text-white bg-transparent p-3 placeholder:text-center resize-none focus:ring-2 focus:ring-white mt-6" 
       name="message" 
       required
@@ -39,7 +42,7 @@
              hover:cursor-pointer
              "
     >
-      Enviar Mensaje
+      {t.msg}
     </button>
   </form>
 </div>

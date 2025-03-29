@@ -3,7 +3,8 @@ const { t, lang } = Astro.props;
 
 interface clientItem {
     title: string,
-    file: string 
+    file: string,
+    url: string
 }
 ---
 
@@ -24,7 +25,7 @@ interface clientItem {
                 {
                     t.clients.map((client:clientItem) => {
                         const Component = client.file;
-                        return <Component />
+                        return <a href={client.url} target="_blank" class="hover:opacity-80 transform duration-300"><Component /></a>
                     })
                 }
             </div>

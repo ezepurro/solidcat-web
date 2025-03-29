@@ -25,7 +25,8 @@ export const en = {
         "clients": [
             {
                 "title": "Beauty Bloom",
-                "file": BeautyBloom
+                "file": BeautyBloom,
+                "url": "https://depilaciondefinitiva-beautybloom.com/"
             }
         ]
     },

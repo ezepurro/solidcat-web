@@ -1,30 +1,56 @@
 ---
 import "../styles/global.css";
 const { lang, title, description } = Astro.props;
+const metaTitle = title ? `${title} | Solid Cat` : 'Solid Cat';
 const metaDescription = description || "Solid Cat: Software Development & Web Solutions.";
+const metaURL = "https://www.solidcat.dev";
+const metaImage = `${metaURL}/images/brand/og-image.png`;
 ---
 
 <!doctype html>
 <html lang={lang}>
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="description" content={metaDescription}>
-		
-		<link rel="alternate" hreflang="es" href="https://www.solidcat.dev/es">
-		<link rel="alternate" hreflang="en" href="https://www.solidcat.dev/en">
+  <head>
+    <!-- Charset & Viewport -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-		<title>{title ? `${title} | Solid Cat` : 'Solid Cat'}</title>
+    <!-- Título y Descripción -->
+    <title>{metaTitle}</title>
+    <meta name="description" content={metaDescription} />
+    <meta name="author" content="Solid Cat" />
+    <meta name="language" content={lang} />
+    <meta name="robots" content="index, follow" />
 
-		<!-- Favicon -->
-		<link rel="icon" type="image/png" href="/favicon/favicon-96x96.png" sizes="96x96" />
-		<link rel="icon" type="image/svg+xml" href="/favicon/favicon.svg" />
-		<link rel="shortcut icon" href="/favicon.ico" />
-		<link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-touch-icon.png" />
-		<meta name="apple-mobile-web-app-title" content="Solid Cat" />
-		<link rel="manifest" href="/favicon/site.webmanifest" />
-	</head>
-	<body>
-		<slot />
-	</body>
+    <!-- Open Graph -->
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content={metaTitle} />
+    <meta property="og:description" content={metaDescription} />
+    <meta property="og:url" content={metaURL} />
+    <meta property="og:image" content={metaImage} />
+    <meta property="og:site_name" content="Solid Cat" />
+    <meta property="og:locale" content={lang === 'es' ? 'es_ES' : 'en_US'} />
+
+    <!-- Twitter Cards -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={metaTitle} />
+    <meta name="twitter:description" content={metaDescription} />
+    <meta name="twitter:image" content={metaImage} />
+    <meta name="twitter:site" content="@solidcat.dev" />
+    <meta name="twitter:creator" content="@solidcat.dev" />
+
+    <!-- Multilang -->
+    <link rel="alternate" hreflang="es" href="https://www.solidcat.dev/es" />
+    <link rel="alternate" hreflang="en" href="https://www.solidcat.dev/en" />
+
+    <!-- Favicons & manifest -->
+    <link rel="icon" type="image/png" href="/favicon/favicon-96x96.png" sizes="96x96" />
+    <link rel="icon" type="image/svg+xml" href="/favicon/favicon.svg" />
+    <link rel="shortcut icon" href="/favicon.ico" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-touch-icon.png" />
+    <meta name="apple-mobile-web-app-title" content="Solid Cat" />
+    <link rel="manifest" href="/favicon/site.webmanifest" />
+  </head>
+  <body>
+    <slot />
+  </body>
 </html>

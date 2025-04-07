@@ -4,7 +4,6 @@ const { lang, title, description } = Astro.props;
 const metaTitle = title ? `${title} | Solid Cat` : 'Solid Cat';
 const metaDescription = description || "Solid Cat: Software Development & Web Solutions.";
 const metaURL = "https://www.solidcat.dev";
-const metaImage = `${metaURL}/images/brand/og-image.png`;
 ---
 
 <!doctype html>
@@ -26,7 +25,7 @@ const metaImage = `${metaURL}/images/brand/og-image.png`;
     <meta property="og:title" content={metaTitle} />
     <meta property="og:description" content={metaDescription} />
     <meta property="og:url" content={metaURL} />
-    <meta property="og:image" content={metaImage} />
+    <meta property="og:image" content="https://www.solidcat.dev/images/brand/og-image.png" />
     <meta property="og:site_name" content="Solid Cat" />
     <meta property="og:locale" content={lang === 'es' ? 'es_ES' : 'en_US'} />
 
@@ -34,7 +33,7 @@ const metaImage = `${metaURL}/images/brand/og-image.png`;
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content={metaTitle} />
     <meta name="twitter:description" content={metaDescription} />
-    <meta name="twitter:image" content={metaImage} />
+    <meta name="twitter:image" content="https://www.solidcat.dev/images/brand/og-image.png" />
     <meta name="twitter:site" content="@solidcat.dev" />
     <meta name="twitter:creator" content="@solidcat.dev" />
 
